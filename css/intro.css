@@ -1,0 +1,198 @@
+/* === Variables === */
+:root {
+    --bg: #f2f5f9;
+    --card: #fff;
+    --brand: #1162ff;
+    --text: #1f2a3a;
+    --muted: #6b7a90;
+    --input: #eef2f7;
+    --ring: #c8d7ff;
+    --shadow: 0 10px 25px rgba(16, 62, 196, 0.08);
+    --radius: 14px;
+  }
+  
+  /* === Reset === */
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  /* === Layout con Grid === */
+  .box {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    min-height: 100vh;
+  }
+  .left {
+    background: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  .logo h1 {
+    color: #fff;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+  }
+  .right {
+    background:
+      radial-gradient(1200px 600px at 90% 10%, rgba(17, 98, 255, .08), transparent 60%),
+      radial-gradient(900px 500px at 70% 80%, rgba(17, 98, 255, .06), transparent 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(24px, 4vw, 56px);
+  }
+  
+  /* === Card === */
+  .card {
+    width: min(560px, 92vw);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(20px, 4vw, 40px);
+    border: 1px solid #edf1f7;
+  }
+  .top h2 {
+    font-size: clamp(22px, 2.3vw, 28px);
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .top .mark {
+    color: var(--text);
+    font-weight: 800;
+  }
+  .top .emoji {
+    margin-left: 6px;
+  }
+  .top p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  /* === Formulario === */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .field {
+    display: grid;
+    grid-template-columns: 28px 1fr 40px;
+    grid-template-rows: auto 44px;
+    grid-template-areas:
+      "label label label"
+      "icon input toggle";
+    gap: 8px 12px;
+    align-items: center;
+  }
+  .lbl {
+    grid-area: label;
+    font-size: 14px;
+  }
+  .ico {
+    grid-area: icon;
+    display: grid;
+    place-items: center;
+    color: #8da2c0;
+  }
+  .in {
+    grid-area: input;
+    width: 100%;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid #e5eaf2;
+    background: var(--input);
+    padding: 0 16px;
+    font-size: 14px;
+    outline: none;
+  }
+  .in:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px var(--ring);
+    background: #fff;
+  }
+  .eye {
+    grid-area: toggle;
+    height: 36px;
+    width: 36px;
+    border-radius: 999px;
+    border: 1px solid #e5eaf2;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  /* === Links y Botones === */
+  .row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -4px;
+  }
+  .link {
+    color: var(--brand);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    height: 46px;
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    background: var(--brand);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(17, 98, 255, 0.2);
+  }
+  .btn:hover {
+    filter: brightness(0.98);
+  }
+  
+  /* === Footer === */
+  .signup {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  
+  /* === Responsive con Media Queries === */
+  @media (max-width: 1024px) {
+    .box {
+      grid-template-columns: 1fr;
+    }
+    .left {
+      display: none;
+    }
+    .right {
+      padding: 28px;
+    }
+    .card {
+      width: min(580px, 96vw);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      padding: 20px;
+    }
+    .field {
+      grid-template-columns: 26px 1fr 34px;
+      grid-template-rows: auto 42px;
+    }
+    .btn {
+      height: 44px;
+    }
+  }
+  

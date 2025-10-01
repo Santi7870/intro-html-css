@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PanelXpress — Login</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/intro.css" />
+</head>
+<body>
+  <main class="box">
+    <section class="left">
+      <div class="logo">
+        <h1>AdminExpress</h1>
+      </div>
+    </section>
+
+    <section class="right">
+      <div class="card">
+        <header class="top">
+          <h2>Inicia <span class="mark">Sesión</span> <span class="emoji">👇</span></h2>
+          <p>Ingresa tus datos para continuar.</p>
+        </header>
+
+        <form class="form" method="post" novalidate>
+          <label class="field">
+            <span class="lbl">Correo</span>
+            <span class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.6" />
+                <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </span>
+            <input class="in" type="email" placeholder="Tu correo" required />
+          </label>
+
+          <label class="field">
+            <span class="lbl">Contraseña</span>
+            <span class="ico" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.6" />
+                <path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+            </span>
+            <input class="in" type="password" placeholder="Tu clave" required />
+          </label>
+
+          <div class="row">
+            <a class="link" href="#">¿Olvidaste tu clave?</a>
+          </div>
+
+          <button class="btn" type="submit">Entrar</button>
+
+          <p class="signup">¿No tienes cuenta?
+            <a class="link" href="#">Regístrate</a>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
