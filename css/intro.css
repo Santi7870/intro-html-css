@@ -1,4 +1,3 @@
-/* === Variables === */
 :root {
     --bg: #f2f5f9;
     --card: #fff;
@@ -11,7 +10,6 @@
     --radius: 14px;
   }
   
-  /* === Reset === */
   * {
     box-sizing: border-box;
   }
@@ -23,7 +21,6 @@
     color: var(--text);
   }
   
-  /* === Layout con Grid === */
   .box {
     display: grid;
     grid-template-columns: 1.2fr 1.8fr;
@@ -51,7 +48,6 @@
     padding: clamp(24px, 4vw, 56px);
   }
   
-  /* === Card === */
   .card {
     width: min(560px, 92vw);
     background: var(--card);
@@ -78,7 +74,6 @@
     margin-bottom: 24px;
   }
   
-  /* === Formulario === */
   .form {
     display: flex;
     flex-direction: column;
@@ -130,7 +125,6 @@
     cursor: pointer;
   }
   
-  /* === Links y Botones === */
   .row {
     display: flex;
     justify-content: flex-end;
@@ -159,7 +153,6 @@
     filter: brightness(0.98);
   }
   
-  /* === Footer === */
   .signup {
     text-align: center;
     color: var(--muted);
@@ -167,7 +160,6 @@
     margin-top: 6px;
   }
   
-  /* === Responsive con Media Queries === */
   @media (max-width: 1024px) {
     .box {
       grid-template-columns: 1fr;
